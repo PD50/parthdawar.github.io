@@ -289,7 +289,7 @@ export default function App() {
     if (c === 'help') output = [{ type: 'info', text: 'Commands: skills, languages, ml, web, data, tools, about, contact, clear' }]
     else if (c === 'clear') { setTerminalHistory([{ type: 'system', text: 'parth@portfolio:~$ Cleared.' }]); return }
     else if (c === 'about') output = [{ type: 'success', text: 'Parth Dawar — ML Researcher @ CNRS | Incoming GS Summer Analyst Intern | IIT Hyderabad' }]
-    else if (c === 'contact') output = [{ type: 'info', text: '→ github.com/parthdawar | linkedin.com/in/parthdawar' }]
+    else if (c === 'contact') output = [{ type: 'info', text: '→ github.com/pd50 | https://www.linkedin.com/in/parth-dawar/' }]
     else if (c === 'skills' || c === 'all') output = Object.entries(skills).map(([k, v]) => ({ type: 'success', text: `[${k.toUpperCase()}] ${v.join(' · ')}` }))
     else if (skills[c]) output = [{ type: 'success', text: `[${c.toUpperCase()}] ${skills[c].join(' · ')}` }]
     else output = [{ type: 'error', text: `Command not found: '${cmd}'. Type 'help'.` }]
